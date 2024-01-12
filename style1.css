@@ -1,0 +1,193 @@
+body {
+    text-align: center;
+    background: linear-gradient(#fffdfd , #ddffdd , #fdfdfd);
+}
+
+.welcome {
+    position: fixed ;
+    bottom : 20px ;
+    right : 20px ;
+    text-align: center;
+    border-radius: 30px ;
+    background-color: rgba(241,245,255,0.8);
+    align-items: center;
+    min-height: 300px ;
+    min-width: 400px ;
+    transition: 0.75s ;
+}
+
+.version {
+    font : bold 16pt courier new ;
+    text-shadow: 2px 3px 4px red ;
+}
+
+.titre {
+    text-shadow: 4px 5px 3px #ffeeff , 2px 4px 4px red , 5px 5px 3px #332244;
+    font: bold 37pt calibri ;
+    transition: 0.75s ;
+}
+
+.titre:hover {
+    letter-spacing: 13px ;
+    text-shadow: -2px 5px 5px #ffeeff , 4px 4px 4px red , 5px 7px 3px #332244;
+    cursor: default;
+}
+
+.score {
+    font : bold 23pt courier new ;
+    transition: 0.5s;
+}
+
+.score:hover {
+    transform: translateY(-10px);
+    cursor: default;
+}
+
+#sco {
+    transition: 0.55s ;
+    color : red ; 
+}
+
+#sco:hover {
+    transform: rotate(90deg);
+}
+
+.descr {
+    font: bold 12pt courier new ;
+    transition: 0.75s ;
+}
+
+.descr:hover {
+    text-decoration: underline double 4px blue ;
+    transform: rotate(10deg);
+    cursor: default;
+}
+
+.espace0 {
+    display: inline-block;
+    justify-content: center;
+    width: 300px;
+}
+
+#star , #stop , #reppt {
+    padding: 10px ;
+    margin: 10px ;
+    min-width: 70px ;
+    font: bold 23pt Tahoma ;
+    border : none ; 
+    border-radius: 40px ;
+    transition: 0.5s;
+}
+
+#star {
+    background-color: #55aa00 ;
+}
+
+#star:hover {
+    transform: translateX(10px);
+    cursor: pointer;
+}
+
+#stop {
+    background-color: #ff3300 ;
+}
+
+#stop:hover {
+    transform: translateY(-15px);
+    cursor: pointer;
+}
+
+#reppt {
+    background-color: #2077ff;
+}
+
+#reppt:hover {
+    transform: rotate(360deg);
+    cursor: pointer;
+}
+
+.espace {
+    width: 300px ;
+    height: 300px ;
+    background: none ;
+    border: 5px double #001122 ;
+    text-align: center;
+    position: relative;
+}
+
+#objet {
+    background-color: none;
+    width: 30px ;
+    height: 30px ;
+    border-radius: 100% ;
+    border: 2px solid green ;
+    position: relative ;
+    top: 0px ;
+    left: 0px ;
+    box-shadow: 2px 3px 8px red , -2px -3px 8px blue , 3px -3px 8px green;
+    transition: 0.45s;
+}
+
+#obvs {
+    background-color: red  ;
+    width: 15px ;
+    height: 15px ;
+    border-radius: 30px ;
+    border: none ;
+    position: absolute ;
+    top: 7.5px ;
+    left: 100px ;
+    transition: 0.45s;
+}
+
+#ctrl {
+    padding: 10px ;
+}
+
+.ctrl {
+    font-size : 23pt ; 
+    padding: 5px ;
+    border-radius: 20px ;
+    min-width: 100px ;
+    border : none ;
+    text-align: center;
+    background-color: bisque ;
+    transition: 0.25s;
+    margin: 5px ;
+}
+
+.ctrl:hover {
+    background: linear-gradient(#ddffdd , #ffeedf , #fdddef );
+    cursor: pointer;
+}
+
+input[value=">"]:hover {
+    transform: translateX(7px);
+}
+
+input[value="<"]:hover {
+    transform: translateX(-7px);
+}
+
+input[value="v"]:hover {
+    transform: translateY(7px);
+}
+
+input[value="^"]:hover {
+    transform: translateY(-7px);
+}
+
+.droit {
+    font-size: 13pt ; 
+    transition: 0.35s ;
+}
+
+.droit:hover {
+    cursor: default ;
+    letter-spacing: 5px ;
+}
+
+.update {
+    font: bold 13pt calbiri ;
+    color : #123451 ; 
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> Score </title>
+    <link rel="stylesheet" href="style1.css">
+    <link rel="icon" href="img.ico">
+    <script src="script1.js"></script>
+</head>
+
+<body>
+    <section class="welcome" id="welcome">
+        <h1 class="titre"> Game Score </h1>
+        <marquee> <p class="version"> Version : 1.0 </p> </marquee> 
+    </section>
+    <div>
+        <div>
+            <h1 class="titre" id="titre"> Game Score </h1>
+            <p class="score"> Score : <span id="sco"> 0 </span> </p>
+            <progress max="100" value="100" id="prog"></progress> <span id="valprog">100%</span> <br>
+            <p class="descr"> Objet's Position : ( <span id="x0">0</span> , <span id="y0">0</span> ) </p>
+            <p class="descr"> Vs Objet's Position : ( <span id="i0">0</span> , <span id="j0">0</span> ) </p>
+        </div> <br>
+        <div class="espace0">
+            <input type="button" value="||" onclick="stoop()" id="stop"><input type="button" value="|>" onclick="staar()" id="star">
+            <input type="button" value=">O" onclick="reepeet()" id="reppt">
+            <form class="espace">
+                <section id="objet"></section>
+                <section id="obvs"></section>
+            </form>
+        </div>
+        <div id="ctrl">
+            <input type="button" value="^" onclick="uup()" class="ctrl"> <br>
+            <input type="button" value="<" onclick="leeft()" class="ctrl">
+            <input type="button" value="v" onclick="doown()" class="ctrl">
+            <input type="button" value=">" onclick="riight()" class="ctrl">
+        </div>
+        <hr>
+        <address class="droit"> ( Version : 1.0 ) || By Aiman_Moulim </address>
+        <p class="update"> Waiting The fixes at Next Update ! </p>
+    </div>
+</body>
+
+</html>
