@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title> Game_Score </title>
+    <title> Score </title>
     <link rel="stylesheet" href="style1.css">
     <link rel="icon" href="icongame.ico">
     <script src="script1.js"></script>
@@ -25,17 +25,26 @@
             <p> <input type="button" value="Appel" onclick="editsetti()" id="butsetti"></p>
         </div>
     </div>
+    <input type="button" value="Scores" onmouseover="viewscores()" class="scoreview">
+    <div id="scorexs" onmouseleave="hidscores()">
+        <div id="spacescore" style="display: none ;">
+            <h1 class="titresco"> Scores : </h1>
+            <hr>
+            <div id="contentscos" style="display: inline-block;"></div>
+        </div>
+    </div>
     <section class="welcome" id="welcome" onmouseleave="hidwelcome()">
         <div style="display: inline-block;">
             <h1 class="titre"> Game Score </h1>
             <marquee>
-                <p class="version"> Version : 1.15 </p>
+                <p class="version"> Version : 1.2 </p>
             </marquee>
             <h1> New !! </h1>
             <p>
         - Settings "?" . <br>
         - Click Method . <br>
-        - Level .
+        - Level . <br>
+        - Scores .
             </p>
         </div>
     </section>
@@ -67,7 +76,7 @@
                 class="ctrl">
         </div>
         <hr>
-        <address class="droit"> ( Version : 1.15 ) || By Aiman_Moulim </address>
+        <address class="droit"> ( Version : 1.2 ) || By Aiman_Moulim </address>
         <p class="update"> Waiting The fixes at Next Update ! </p>
     </div>
 </body>

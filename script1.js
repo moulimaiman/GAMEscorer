@@ -4,6 +4,7 @@ var y = 7.5 ;
 var x = 100 ; 
 var s = 0 ; 
 var rep = 0 ;
+var numsco = 0 ; 
 var a , b , c , k1 , k2 , k3 , k4 ; 
 var progre = 100 ; 
 var sppe = 200 ; 
@@ -29,10 +30,6 @@ function setting() {
     param.style.opacity = "100%" ; 
     param.style.padding = "5px" ;
     document.getElementById("contsetti").style.display = "inline-block" ;
-    document.getElementById("selelevel").style.display = "block" ; 
-    document.getElementById("speeds").style.display = "block" ; 
-    document.getElementById("bgdcolor").style.display = "block" ; 
-    document.getElementById("butsetti").style.display = "block" ;
 }
 
 function editsetti() {
@@ -44,11 +41,25 @@ function editsetti() {
     param.style.opacity = "0%" ; 
     param.style.padding = "0px" ;
     testbgd = document.getElementById("selelevel").value ; 
-    document.getElementById("selelevel").style.display = "none" ; 
     document.getElementById("contsetti").style.display = "none" ;
-    document.getElementById("speeds").style.display = "none" ; 
-    document.getElementById("bgdcolor").style.display = "none" ; 
-    document.getElementById("butsetti").style.display = "none" ;
+}
+
+function viewscores() {
+    var divs = document.getElementById("scorexs") ; 
+    divs.style.width = "300px" ; 
+    divs.style.opacity = "100%" ; 
+    divs.style.padding = "5px" ;
+    setTimeout(() => {
+        document.getElementById("spacescore").style.display = "inline-block" ; 
+    }, 700);
+}
+
+function hidscores() {
+    var divs = document.getElementById("scorexs") ; 
+    divs.style.width = "0px" ; 
+    divs.style.opacity = "0%" ; 
+    divs.style.padding = "0px" ;
+    document.getElementById("spacescore").style.display = "none" ; 
 }
 
 function uup() {
@@ -184,17 +195,7 @@ function repet() {
             document.getElementById("valprog").innerHTML = progre+"%";
             document.getElementById("prog").value = progre  ; 
             if ( progre < 0  ) {
-                document.getElementById("sco").innerHTML = 0 ; 
-                document.getElementById("obvs").style.top = 7.5+"px" ; 
-                document.getElementById("obvs").style.left = 100+"px" ; 
-                document.getElementById("prog").value = 100 ; 
-                rep = 0 ; s = 0 ; i = 0 ; j = 0 ; x = 100 ; y = 7.5 ; 
-                progre = 100 ;
-                document.getElementById("valprog").innerHTML = progre+"%";
-                document.getElementById("objet").style.top = 0+"px" ;
-                document.getElementById("objet").style.left = 0+"px" ;
-                document.getElementById("x0").innerHTML = 0 ; 
-                document.getElementById("y0").innerHTML = 0 ; 
+                reepeet() ; 
         }
     }
 }
@@ -202,11 +203,15 @@ var t = setInterval(repet, 1000);
 
 function staar() {
     t = setInterval(repet,1000) ; 
+    staart.disabled = true ; 
 }
 function stoop() {
     clearInterval(t) ; 
+    staart.disabled = false ; 
 }
 function reepeet() {
+    numsco += 1 ; 
+    document.getElementById("contentscos").innerHTML += "<p class='sortscos' style='color : white !important ; '> Score "+numsco+" : <span class='notescos'>"+s+"</span> </p>" ;
     document.getElementById("sco").innerHTML = 0;
     document.getElementById("obvs").style.top = 7.5 + "px";
     document.getElementById("obvs").style.left = 100 + "px";
